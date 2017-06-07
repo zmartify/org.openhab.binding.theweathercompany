@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<thing:thing-descriptions bindingId="theweathercompany"
+						  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+						  xmlns:thing="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0"
+						  xsi:schemaLocation="http://eclipse.org/smarthome/schemas/thing-description/v1.0.0 http://eclipse.org/smarthome/schemas/thing-description-1.0.0.xsd">
+
+    <!-- The Weather Company Binding -->
+    <thing-type id="weather">
+        <label>Weather Information</label>
+        <description>Provides various weather data from The Weather Company service</description>
+
+        <channels>
+            <channel id="temperature" typeId="temperature" />
+            <channel id="tempTrend" typeId="temperatureTrend" />
+            <channel id="humidity" typeId="humidity" />
+            <channel id="timeStamp" typeId="timeUtc" />   
+            <channel id="feelsLike" typeId="feelsLike" />
+            <channel id="heatIndex" typeId="heatIndex" />
+            <channel id="dewPoint" typeId="dewPoint" />
+            <channel id="pressure" typeId="pressure" />
+            <channel id="windAngle" typeId="WindAngle" />
+            <channel id="windStrength" typeId="WindStrength" />
+            <channel id="gustStrength" typeId="GustStrength" />
+            <channel id="uvindex" typeId="uvindex" />
+            <channel id="unit" typeId="unit" />
+            <channel id="forecast48hour" typeId="forecast" />
+        </channels>
+
+        <config-description>
+            <parameter name="hostname" type="text" required="true">
+                <label>TWC Hostname</label>
+                <description>The Weather Company Hostname (url)</description>
+                <default>twcservice.eu-gb.mybluemix.net</default>
+            </parameter>
+            <parameter name="authkey" type="text" required="true">
+                <label>Authentication Key</label>
+                <description>The Weather Company Authentication Key</description>
+                <default>da12fe5d-13fa-4f51-94d3-baf454a0468a</default>
+            </parameter>
+            <parameter name="authtoken" type="text" required="true">
+                <label>Authentication Token</label>
+                <description>The Weather Company Authentication Token</description>
+                <default>pEDAFCPKMu</default>
+            </parameter>
+            <parameter name="latitude" type="integer" required="true">
+                <label>Location Latitude</label>
+                <description>Latitude of the Location for the weather information.</description>
+                <default>56.368</default>
+            </parameter>
+            <parameter name="longitude" type="integer" required="true">
+                <label>Location longitude</label>
+                <description>Longitude of the Location for the weather information.</description>
+                <default>8.99</default>
+            </parameter>
+            <parameter name="refresh" type="integer" min="60">
+                <label>Refresh interval</label>
+                <description>Specifies the refresh interval in seconds.</description>
+                <default>300</default>
+            </parameter>
+        </config-description>
+    </thing-type>
+      
+    <channel-type id="location">
+        <item-type>Location</item-type>
+        <label>Location</label>
+        <description>Location of the device</description>
+        <state readOnly="true" pattern="%2$s°N,%3$s°W, %1$s m"/>
+    </channel-type>
+    
+    <channel-type id="temperature">
+        <item-type>Number</item-type>
+        <label>Temperature</label>
+        <description>Current temperature</description>
+        <category>Temperature</category>
+        <state readOnly="true" pattern="%.1f °C">
+        </state>
+    </channel-type>
+    
+    <channel-type id="temperatureTrend" advanced="true">
+        <item-type>String</item-type>
+        <label>Temp Trend</label>
+        <description>Temperature Evolution Trend</description>
+        <category>Temperature</category>
+        <state readOnly="true" pattern="%s">
+        </state>
+    </channel-type>
+    
+    <channel-type id="pressure">
+        <item-type>Number</item-type>
+        <label>Pressure</label>
+        <description>Current pressure in hPa</description>
+        <category>Pressure</category>
+        <state readOnly="true" pattern="%.1f hPa"></state>                
+    </channel-type>
+    
+    <channel-type id="pressureTrend" advanced="true">
+        <item-type>String</item-type>
+        <label>Pressure Trend</label>
+        <description>Pressure evolution trend for last 12h (up, down, stable)</description>
+        <category>Pressure</category>
+        <state readOnly="true" pattern="%s"></state>                
+    </channel-type>
+    
+    <channel-type id="absolutePressure" advanced="true">
+        <item-type>Number</item-type>
+        <label>Abs Pressure</label>
+        <description>Absolute pressure in hPa</description>
+        <category>Pressure</category>
+        <state readOnly="true" pattern="%.1f hPa"></state>                
+    </channel-type>
+    
+    <channel-type id="humidity">
+        <item-type>Number</item-type>
+        <label>Humidity</label>
+        <description>Current humidity in %</description>
+        <category>Humidity</category>
+        <state readOnly="true" pattern="%d %%">
+        </state>
+    </channel-type>
+    
+   <channel-type id="humidex">
+        <item-type>Number</item-type>
+        <label>Humidex</label>
+        <description>Computed Humidex index</description>
+        <category>Temperature</category>
+        <state readOnly="true" pattern="%.0f">
+        </state>
+    </channel-type>
+    
+    <channel-type id="feelsLike">
+        <item-type>Number</item-type>
+        <label>Feels like</label>
+        <description>Computed Feels Like temperature</description>
+        <category>Temperature</category>
+        <state readOnly="true" pattern="%.1f °C">
+        </state>
+    </channel-type>
+
+    <channel-type id="heatIndex">
+        <item-type>Number</item-type>
+        <label>Heat Index</label>
+        <description>Computed Heat Index</description>
+        <category>Temperature</category>
+        <state readOnly="true" pattern="%.0f">
+        </state>
+    </channel-type>
+    
+    <channel-type id="uvindex">
+        <item-type>Number</item-type>
+        <label>UV Index</label>
+        <description>Current UV index in ??</description>
+        <category>UVIndex</category>
+        <state readOnly="true" pattern="%d out of 10" />
+    </channel-type>
+
+    <channel-type id="forecast">
+        <item-type>String</item-type>
+        <label>Forecast</label>
+        <description>Weather forecast as JSON String</description>
+        <category>Forecast</category>
+        <state readOnly="true"></state>
+    </channel-type>
+
+    <channel-type id="dewPoint" advanced="true">
+        <item-type>Number</item-type>
+        <label>Dewpoint</label>
+        <description>Computed Dewpoint Temperature</description>
+        <category>Temperature</category>
+        <state readOnly="true" pattern="%.1f °C">
+        </state>
+    </channel-type>
+    
+    <channel-type id="dewPointDepression" advanced="true">
+        <item-type>Number</item-type>
+        <label>Dewpoint Depression</label>
+        <description>Computed Dewpoint Depression</description>
+        <state readOnly="true" pattern="%.1f">
+        </state>
+    </channel-type>
+    
+    <channel-type id="rain">
+        <item-type>Number</item-type>
+        <label>Rain</label>
+        <description>Quantity of water</description>
+        <category>Rain</category>
+        <state readOnly="true" pattern="%d mm"/>
+    </channel-type>
+    
+    <channel-type id="rain1" advanced="true">
+        <item-type>Number</item-type>
+        <label>Rain 1h</label>
+        <description>Quantity of water on last hour</description>
+        <category>Rain</category>
+        <state readOnly="true" pattern="%d mm / 1h"/>
+    </channel-type>
+    
+    <channel-type id="rain24" advanced="true">
+        <item-type>Number</item-type>
+        <label>Rain 24h</label>
+        <description>Quantity of water on last day</description>
+        <category>Rain</category>
+        <state readOnly="true" pattern="%d mm / 24h"/>
+    </channel-type>
+    
+    <channel-type id="WindAngle">
+        <item-type>Number</item-type>
+        <label>Wind Angle</label>
+        <description>Current 5 min average wind direction</description>
+        <category>Wind</category>
+        <state min="0" max="360" step="1" readOnly="true" pattern="%d °"></state>
+    </channel-type>
+    
+    <channel-type id="WindStrength">
+        <item-type>Number</item-type>
+        <label>Wind Strength</label>
+        <description>Current 5 min average wind speed</description>
+        <category>Wind</category>
+        <state readOnly="true" pattern="%.1f km/h"/>
+    </channel-type>
+    
+    <channel-type id="GustAngle">
+        <item-type>Number</item-type>
+        <label>Gust Angle</label>
+        <description>Direction of the last 5 min highest gust wind</description>
+        <category>Wind</category>
+        <state min="0" max="360" step="1" readOnly="true" pattern="%d °"></state>
+    </channel-type>
+    
+    <channel-type id="GustStrength">
+        <item-type>Number</item-type>
+        <label>Gust Strength</label>
+        <description>Speed of the last 5 min highest gust wind</description>
+        <category>Wind</category>
+        <state readOnly="true" pattern="%.1f km/h"/>
+    </channel-type>
+    
+    <channel-type id="unit">
+        <item-type>String</item-type>
+        <label>Unit system</label>
+        <description>Describes unit system of provided values (metric, imperial or hybrid)</description>
+        <state readOnly="true">
+            <options>
+                <option value="e">Imperial(English)</option>
+                <option value="m">Metric</option>
+                <option value="h">Hybrid</option>
+            </options>
+        </state>
+    </channel-type>      
+    
+    <channel-type id="windUnit">
+        <item-type>Number</item-type>
+        <label>Wind Unit</label>
+        <description>Unit used to report Wind speeds</description>
+        <state readOnly="true">
+            <options>
+                <option value="0">Km/h</option>
+                <option value="1">Miles/H</option>
+                <option value="2">m/s</option>
+                <option value="3">Beaufort</option>
+                <option value="4">Knot</option>
+            </options>
+        </state>
+    </channel-type>      
+    
+    <channel-type id="pressureUnit">
+        <item-type>Number</item-type>
+        <label>Pressure Unit</label>
+        <description>Unit used to report Pressure values</description>
+        <state readOnly="true">
+            <options>
+                <option value="0">mbar</option>
+                <option value="1">inHg</option>
+                <option value="2">mmHg</option>
+            </options>
+        </state>
+    </channel-type>                                                                                                                                              
+
+    <channel-type id="timeUtc" advanced="true">
+        <item-type>DateTime</item-type>
+        <label>Measurement Time</label>
+        <description>Timestamp when data was measured</description>
+        <state readOnly="true"/>
+    </channel-type>      
+
+</thing:thing-descriptions>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<checkstyle version="7.7">
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\.classpath">
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\about.html">
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\build.properties">
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\ESH-INF\binding\binding.xml">
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\ESH-INF\i18n\configstatus.properties">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\ESH-INF\i18n\configstatus_de.properties">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\ESH-INF\i18n\theweathercompany_de.properties">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\ESH-INF\i18n\thingstatus.properties">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\ESH-INF\i18n\thingstatus_de.properties">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\ESH-INF\thing\thing-types.xml">
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\META-INF\MANIFEST.MF">
+<error line="10" severity="warning" message="The version of the package com.google.common.collect should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="11" severity="warning" message="The version of the package com.google.gson should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="12" severity="warning" message="The version of the package org.apache.commons.io should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="13" severity="warning" message="The version of the package org.apache.commons.lang should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="14" severity="warning" message="The version of the package org.apache.commons.net should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="15" severity="warning" message="The version of the package org.apache.commons.net.util should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="16" severity="warning" message="The version of the package org.apache.http should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="17" severity="warning" message="The version of the package org.apache.http.client should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="18" severity="warning" message="The version of the package org.apache.http.client.methods should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="19" severity="warning" message="The version of the package org.apache.http.client.utils should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="20" severity="warning" message="The version of the package org.apache.http.entity should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="21" severity="warning" message="The version of the package org.apache.http.impl.client should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+<error line="22" severity="warning" message="The version of the package org.apache.http.message should not be specified" source="org.openhab.tools.analysis.checkstyle.ManifestPackageVersionCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\OSGI-INF\TheWeatherCompanyHandlerFactory.xml">
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\pom.xml">
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\README.md">
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\exception\TWCReSTException.java">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="4" severity="info" message="Line does not match expected header line of &apos; * All rights reserved. This program and the accompanying materials&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
+<error line="5" severity="warning" message="Missing Javadoc comment." source="org.openhab.tools.analysis.checkstyle.JavadocFilterCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\handler\TheWeatherCompanyHandler.java">
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\internal\datatypes\ContentType.java">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="4" severity="info" message="Line does not match expected header line of &apos; * All rights reserved. This program and the accompanying materials&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\internal\datatypes\DailyFormat.java">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="4" severity="info" message="Line does not match expected header line of &apos; * All rights reserved. This program and the accompanying materials&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\internal\datatypes\Language.java">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="4" severity="info" message="Line does not match expected header line of &apos; * All rights reserved. This program and the accompanying materials&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\internal\datatypes\Units.java">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="4" severity="info" message="Line does not match expected header line of &apos; * All rights reserved. This program and the accompanying materials&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\internal\TheWeatherCompanyHandlerFactory.java">
+<error line="29" column="19" severity="info" message="&apos;static&apos; modifier out of order with the JLS suggestions." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\internal\TWCAPIClient.java">
+<error line="0" severity="info" message="File does not end with a newline." source="com.puppycrawl.tools.checkstyle.checks.NewlineAtEndOfFileCheck"/>
+<error line="4" severity="info" message="Line does not match expected header line of &apos; * All rights reserved. This program and the accompanying materials&apos;." source="com.puppycrawl.tools.checkstyle.checks.header.HeaderCheck"/>
+<error line="116" column="23" severity="info" message="Name &apos;IsSecuredConnection&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.MethodNameCheck"/>
+<error line="135" column="22" severity="info" message="Name &apos;METHOD&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableNameCheck"/>
+<error line="193" severity="info" message="Comment matches to-do format &apos;(TODO)|(FIXME)&apos;." source="com.puppycrawl.tools.checkstyle.checks.TodoCommentCheck"/>
+<error line="256" column="22" severity="info" message="Name &apos;METHOD&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableNameCheck"/>
+<error line="272" column="22" severity="info" message="Name &apos;METHOD&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableNameCheck"/>
+<error line="287" column="22" severity="info" message="Name &apos;METHOD&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableNameCheck"/>
+<error line="303" column="22" severity="info" message="Name &apos;METHOD&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableNameCheck"/>
+<error line="314" column="22" severity="info" message="Name &apos;METHOD&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableNameCheck"/>
+<error line="329" column="22" severity="info" message="Name &apos;METHOD&apos; must match pattern &apos;^[a-z][a-zA-Z0-9]*$&apos;." source="com.puppycrawl.tools.checkstyle.checks.naming.LocalFinalVariableNameCheck"/>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\TheWeatherCompanyBindingConstants.java">
+<error line="28" column="18" severity="info" message="&apos;static&apos; modifier out of order with the JLS suggestions." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+<error line="30" column="18" severity="info" message="&apos;static&apos; modifier out of order with the JLS suggestions." source="com.puppycrawl.tools.checkstyle.checks.modifier.ModifierOrderCheck"/>
+</file>
+</checkstyle>

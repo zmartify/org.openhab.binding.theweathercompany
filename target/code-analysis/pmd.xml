@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.5.1" timestamp="2017-06-06T15:54:29.469">
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\handler\TheWeatherCompanyHandler.java">
+<violation beginline="88" endline="88" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Java Logging" package="org.openhab.binding.theweathercompany.handler" class="TheWeatherCompanyHandler" method="initialize" externalInfoUrl="https://pmd.github.io/pmd-5.5.1/pmd-java/rules/java/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+<violation beginline="90" endline="90" begincolumn="13" endcolumn="32" rule="AvoidPrintStackTrace" ruleset="Java Logging" package="org.openhab.binding.theweathercompany.handler" class="TheWeatherCompanyHandler" method="initialize" externalInfoUrl="https://pmd.github.io/pmd-5.5.1/pmd-java/rules/java/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+<file name="C:\Users\peter\openhab2-master\git\openhab2-addons\addons\binding\org.openhab.binding.theweathercompany\src\main\java\org\openhab\binding\theweathercompany\internal\TWCAPIClient.java">
+<violation beginline="194" endline="194" begincolumn="13" endcolumn="31" rule="AvoidPrintStackTrace" ruleset="Java Logging" package="org.openhab.binding.theweathercompany.internal" class="TWCAPIClient" method="readContent" externalInfoUrl="https://pmd.github.io/pmd-5.5.1/pmd-java/rules/java/logging-java.html#AvoidPrintStackTrace" priority="3">
+Avoid printStackTrace(); use a logger call instead.
+</violation>
+</file>
+</pmd>
