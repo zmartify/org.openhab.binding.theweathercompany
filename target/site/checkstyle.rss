@@ -27,8 +27,8 @@ under the License.
     <item>
       <title>File: 23,
              Errors: 0,
-             Warnings: 14,
-             Infos: 29
+             Warnings: 15,
+             Infos: 22
       </title>
             <link>${project.url}/checkstyle.html</link>
       <description>
@@ -144,20 +144,6 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="${project.url}/checkstyle.html#src.main.java.org.openhab.binding.theweathercompany.internal.TWCAPIClient.java">src/main/java/org/openhab/binding/theweathercompany/internal/TWCAPIClient.java</a>
-                </td>
-                <td>
-                  11
-                </td>
-                <td>
-                  0
-                </td>
-                <td>
-                  0
-                </td>
-              </tr>
-                          <tr>
-                <td>
                   <a href="${project.url}/checkstyle.html#ESH-INF.binding.binding.xml">ESH-INF/binding/binding.xml</a>
                 </td>
                 <td>
@@ -232,6 +218,20 @@ under the License.
                 </td>
                 <td>
                   0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="${project.url}/checkstyle.html#src.main.java.org.openhab.binding.theweathercompany.internal.APIClient.java">src/main/java/org/openhab/binding/theweathercompany/internal/APIClient.java</a>
+                </td>
+                <td>
+                  4
                 </td>
                 <td>
                   0
@@ -360,7 +360,7 @@ under the License.
                   0
                 </td>
                 <td>
-                  13
+                  14
                 </td>
                 <td>
                   0

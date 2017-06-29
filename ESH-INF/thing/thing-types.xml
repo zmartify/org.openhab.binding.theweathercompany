@@ -35,22 +35,17 @@
             <parameter name="authkey" type="text" required="true">
                 <label>Authentication Key</label>
                 <description>The Weather Company Authentication Key</description>
-                <default>da12fe5d-13fa-4f51-94d3-baf454a0468a</default>
+                <default></default>
             </parameter>
             <parameter name="authtoken" type="text" required="true">
                 <label>Authentication Token</label>
                 <description>The Weather Company Authentication Token</description>
-                <default>pEDAFCPKMu</default>
+                <default></default>
             </parameter>
-            <parameter name="latitude" type="integer" required="true">
-                <label>Location Latitude</label>
-                <description>Latitude of the Location for the weather information.</description>
-                <default>56.368</default>
-            </parameter>
-            <parameter name="longitude" type="integer" required="true">
-                <label>Location longitude</label>
-                <description>Longitude of the Location for the weather information.</description>
-                <default>8.99</default>
+            <parameter name="location" type="text" required="true">
+                <label>Location</label>
+                <description>Location - latitude, longitude and altitude separated by commas.</description>
+                <default>56.368,8.99,0</default>
             </parameter>
             <parameter name="refresh" type="integer" min="60">
                 <label>Refresh interval</label>

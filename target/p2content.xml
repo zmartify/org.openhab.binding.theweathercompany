@@ -1,35 +1,38 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <units size='1'>
-  <unit id='org.openhab.binding.theweathercompany' version='2.1.0.201706061351'>
-    <update id='org.openhab.binding.theweathercompany' range='[0.0.0,2.1.0.201706061351)' severity='0'/>
+  <unit id='org.openhab.binding.theweathercompany' version='2.1.0.201706241617'>
+    <update id='org.openhab.binding.theweathercompany' range='[0.0.0,2.1.0.201706241617)' severity='0'/>
     <properties size='5'>
-      <property name='org.eclipse.equinox.p2.name' value='TheWeatherCompany Binding'/>
+      <property name='org.eclipse.equinox.p2.name' value='The Weather Company Binding'/>
       <property name='org.eclipse.equinox.p2.provider' value='openHAB'/>
       <property name='maven-groupId' value='org.openhab.binding'/>
       <property name='maven-artifactId' value='org.openhab.binding.theweathercompany'/>
       <property name='maven-version' value='2.1.0-SNAPSHOT'/>
     </properties>
     <provides size='5'>
-      <provided namespace='org.eclipse.equinox.p2.iu' name='org.openhab.binding.theweathercompany' version='2.1.0.201706061351'/>
-      <provided namespace='osgi.bundle' name='org.openhab.binding.theweathercompany' version='2.1.0.201706061351'/>
+      <provided namespace='org.eclipse.equinox.p2.iu' name='org.openhab.binding.theweathercompany' version='2.1.0.201706241617'/>
+      <provided namespace='osgi.bundle' name='org.openhab.binding.theweathercompany' version='2.1.0.201706241617'/>
       <provided namespace='java.package' name='org.openhab.binding.theweathercompany' version='0.0.0'/>
       <provided namespace='java.package' name='org.openhab.binding.theweathercompany.handler' version='0.0.0'/>
       <provided namespace='org.eclipse.equinox.p2.eclipse.type' name='bundle' version='1.0.0'/>
     </provides>
-    <requires size='24'>
+    <requires size='27'>
       <required namespace='java.package' name='com.google.common.collect' range='10.0.1'/>
       <required namespace='java.package' name='com.google.gson' range='2.5.0'/>
+      <required namespace='java.package' name='javax.net' range='0.0.0'/>
+      <required namespace='java.package' name='javax.net.ssl' range='0.0.0'/>
       <required namespace='java.package' name='org.apache.commons.io' range='2.2.0'/>
       <required namespace='java.package' name='org.apache.commons.lang' range='2.6.0'/>
       <required namespace='java.package' name='org.apache.commons.net' range='3.2.0'/>
       <required namespace='java.package' name='org.apache.commons.net.util' range='3.2.0'/>
-      <required namespace='java.package' name='org.apache.http' range='4.3.3'/>
-      <required namespace='java.package' name='org.apache.http.client' range='4.3.6'/>
-      <required namespace='java.package' name='org.apache.http.client.methods' range='4.3.6'/>
-      <required namespace='java.package' name='org.apache.http.client.utils' range='4.3.6'/>
-      <required namespace='java.package' name='org.apache.http.entity' range='4.3.3'/>
-      <required namespace='java.package' name='org.apache.http.impl.client' range='4.3.6'/>
-      <required namespace='java.package' name='org.apache.http.message' range='4.3.3'/>
+      <required namespace='java.package' name='org.eclipse.jetty.client' range='9.2.12'/>
+      <required namespace='java.package' name='org.eclipse.jetty.client.api' range='9.2.12'/>
+      <required namespace='java.package' name='org.eclipse.jetty.client.util' range='9.2.12'/>
+      <required namespace='java.package' name='org.eclipse.jetty.http' range='9.2.12'/>
+      <required namespace='java.package' name='org.eclipse.jetty.io' range='9.2.12'/>
+      <required namespace='java.package' name='org.eclipse.jetty.util' range='9.2.12'/>
+      <required namespace='java.package' name='org.eclipse.jetty.util.component' range='9.2.12'/>
+      <required namespace='java.package' name='org.eclipse.jetty.util.ssl' range='9.2.12'/>
       <required namespace='java.package' name='org.eclipse.smarthome.config.core' range='0.0.0'/>
       <required namespace='java.package' name='org.eclipse.smarthome.config.core.status' range='0.0.0'/>
       <required namespace='java.package' name='org.eclipse.smarthome.core.library.types' range='0.0.0'/>
@@ -43,13 +46,13 @@
       <required namespace='java.package' name='org.slf4j' range='0.0.0'/>
     </requires>
     <artifacts size='1'>
-      <artifact classifier='osgi.bundle' id='org.openhab.binding.theweathercompany' version='2.1.0.201706061351'/>
+      <artifact classifier='osgi.bundle' id='org.openhab.binding.theweathercompany' version='2.1.0.201706241617'/>
     </artifacts>
     <touchpoint id='org.eclipse.equinox.p2.osgi' version='1.0.0'/>
     <touchpointData size='1'>
       <instructions size='1'>
         <instruction key='manifest'>
-          Bundle-SymbolicName: org.openhab.binding.theweathercompany;singleton:=true&#xA;Bundle-Version: 2.1.0.201706061351&#xA;
+          Bundle-SymbolicName: org.openhab.binding.theweathercompany;singleton:=true&#xA;Bundle-Version: 2.1.0.201706241617&#xA;
         </instruction>
       </instructions>
     </touchpointData>

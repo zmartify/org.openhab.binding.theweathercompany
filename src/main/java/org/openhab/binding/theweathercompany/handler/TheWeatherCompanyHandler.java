@@ -32,7 +32,7 @@ import org.eclipse.smarthome.core.types.RefreshType;
 import org.eclipse.smarthome.core.types.State;
 import org.eclipse.smarthome.core.types.UnDefType;
 import org.openhab.binding.theweathercompany.exception.TWCReSTException;
-import org.openhab.binding.theweathercompany.internal.TWCAPIClient;
+import org.openhab.binding.theweathercompany.internal.APIClient;
 import org.openhab.binding.theweathercompany.internal.datatypes.Units;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -48,7 +48,7 @@ import com.google.gson.JsonObject;
  */
 public class TheWeatherCompanyHandler extends ConfigStatusThingHandler {
 
-    private final Logger logger = LoggerFactory.getLogger(TheWeatherCompanyHandler.class);
+    private Logger logger = LoggerFactory.getLogger(TheWeatherCompanyHandler.class);
 
     private final int MAX_DATA_AGE = 3 * 60 * 60 * 1000; // 3h
 
@@ -68,7 +68,7 @@ public class TheWeatherCompanyHandler extends ConfigStatusThingHandler {
 
     private Units units = null;
 
-    private TWCAPIClient twcAPIClient = null;
+    private APIClient apiClient = null;
 
     ScheduledFuture<?> refreshJob;
 
@@ -83,12 +83,14 @@ public class TheWeatherCompanyHandler extends ConfigStatusThingHandler {
         Configuration config = getThing().getConfiguration();
 
         try {
-            twcAPIClient = new TWCAPIClient(config);
+            apiClient = new APIClient(config);
         } catch (KeyManagementException e1) {
             e1.printStackTrace();
         } catch (NoSuchAlgorithmException e1) {
             e1.printStackTrace();
         }
+
+        apiClient.start();
 
         try {
             refresh = (BigDecimal) config.get(PARAM_REFRESH);
@@ -98,7 +100,7 @@ public class TheWeatherCompanyHandler extends ConfigStatusThingHandler {
 
         if (refresh == null) {
             // let's go for the default
-            refresh = new BigDecimal(60);
+            refresh = new BigDecimal(300);
         }
 
         startAutomaticRefresh();
@@ -110,7 +112,10 @@ public class TheWeatherCompanyHandler extends ConfigStatusThingHandler {
     @Override
     public void dispose() {
         refreshJob.cancel(true);
-        twcAPIClient = null;
+        if (apiClient != null) {
+            apiClient.stop();
+            apiClient = null;
+        }
     }
 
     private void startAutomaticRefresh() {
@@ -159,6 +164,12 @@ public class TheWeatherCompanyHandler extends ConfigStatusThingHandler {
                         break;
                     case CHANNEL_MIN_TEMPERATURE:
                         updateState(channelUID, getWeatherState(TWC_MINTEMP));
+                        break;
+                    case CHANNEL_HEAT_INDEX:
+                        updateState(channelUID, getWeatherState(TWC_HEAT_INDEX));
+                        break;
+                    case CHANNEL_FEELS_LIKE:
+                        updateState(channelUID, getWeatherState(TWC_FEELS_LIKE));
                         break;
                     case CHANNEL_HUMIDITY:
                         updateState(channelUID, getWeatherState(TWC_HUMIDITY));
@@ -218,7 +229,7 @@ public class TheWeatherCompanyHandler extends ConfigStatusThingHandler {
         }
 
         try {
-            data = twcAPIClient.getCurrentConditions();
+            data = apiClient.getCurrentConditions();
 
             if (!data.has("observation")) {
                 if (isCurrentDataExpired()) {
@@ -244,7 +255,7 @@ public class TheWeatherCompanyHandler extends ConfigStatusThingHandler {
                 weatherData = data.get("observation").getAsJsonObject();
 
                 if (isForecastExpired() || (weatherFcst == null)) {
-                    weatherFcst = twcAPIClient.getHourlyForecast();
+                    weatherFcst = apiClient.getHourlyForecast();
                     lastFcstTime = System.currentTimeMillis();
 
                     updateState(new ChannelUID(getThing().getUID(), CHANNEL_FORECAST_48HOUR), getWeatherForecast());

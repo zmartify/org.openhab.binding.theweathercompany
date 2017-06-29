@@ -24,7 +24,7 @@ public class TheWeatherCompanyBindingConstants {
 
     private static final String BINDING_ID = "theweathercompany";
 
-    // List all Thing Type UIDs, related to the YahooWeather Binding
+    // List all Thing Type UIDs, related to 'The Weather Company' Binding
     public final static ThingTypeUID THING_TYPE_WEATHER = new ThingTypeUID(BINDING_ID, "weather");
 
     public final static Set<ThingTypeUID> SUPPORTED_THING_TYPES_UIDS = ImmutableSet.of(THING_TYPE_WEATHER);
@@ -33,8 +33,7 @@ public class TheWeatherCompanyBindingConstants {
     public static final String PARAM_HOSTNAME = "hostname";
     public static final String PARAM_AUTHKEY = "authkey";
     public static final String PARAM_AUTHTOKEN = "authtoken";
-    public static final String PARAM_LONGITUDE = "longitude";
-    public static final String PARAM_LATITUDE = "latitude";
+    public static final String PARAM_LOCATION = "location";
     public static final String PARAM_REFRESH = "refresh";
     public static final String PARAM_SECURE = "secure";
 

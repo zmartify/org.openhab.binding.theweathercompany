@@ -3,25 +3,27 @@ Bundle-SymbolicName: org.openhab.binding.theweathercompany;singleton:=
  true
 Export-Package: org.openhab.binding.theweathercompany,org.openhab.bind
  ing.theweathercompany.handler
-Bundle-Name: TheWeatherCompany Binding
-Bundle-Version: 2.1.0.201706061351
+Bundle-Name: The Weather Company Binding
+Bundle-Version: 2.1.0.201706241617
 Bundle-ClassPath: .
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-ActivationPolicy: lazy
 Bundle-Vendor: openHAB
 Import-Package: com.google.common.collect;version="10.0.1",com.google.
- gson;version="2.5.0",org.apache.commons.io;version="2.2.0",org.apache
- .commons.lang;version="2.6.0",org.apache.commons.net;version="3.2.0",
- org.apache.commons.net.util;version="3.2.0",org.apache.http;version="
- 4.3.3",org.apache.http.client;version="4.3.6",org.apache.http.client.
- methods;version="4.3.6",org.apache.http.client.utils;version="4.3.6",
- org.apache.http.entity;version="4.3.3",org.apache.http.impl.client;ve
- rsion="4.3.6",org.apache.http.message;version="4.3.3",org.eclipse.sma
- rthome.config.core,org.eclipse.smarthome.config.core.status,org.eclip
- se.smarthome.core.library.types,org.eclipse.smarthome.core.thing,org.
- eclipse.smarthome.core.thing.binding,org.eclipse.smarthome.core.thing
- .binding.builder,org.eclipse.smarthome.core.thing.type,org.eclipse.sm
- arthome.core.types,org.openhab.binding.theweathercompany,org.openhab.
- binding.theweathercompany.handler,org.slf4j
+ gson;version="2.5.0",javax.net,javax.net.ssl,org.apache.commons.io;ve
+ rsion="2.2.0",org.apache.commons.lang;version="2.6.0",org.apache.comm
+ ons.net;version="3.2.0",org.apache.commons.net.util;version="3.2.0",o
+ rg.eclipse.jetty.client;version="9.2.12",org.eclipse.jetty.client.api
+ ;version="9.2.12",org.eclipse.jetty.client.util;version="9.2.12",org.
+ eclipse.jetty.http;version="9.2.12",org.eclipse.jetty.io;version="9.2
+ .12",org.eclipse.jetty.util;version="9.2.12",org.eclipse.jetty.util.c
+ omponent;version="9.2.12",org.eclipse.jetty.util.ssl;version="9.2.12"
+ ,org.eclipse.smarthome.config.core,org.eclipse.smarthome.config.core.
+ status,org.eclipse.smarthome.core.library.types,org.eclipse.smarthome
+ .core.thing,org.eclipse.smarthome.core.thing.binding,org.eclipse.smar
+ thome.core.thing.binding.builder,org.eclipse.smarthome.core.thing.typ
+ e,org.eclipse.smarthome.core.types,org.openhab.binding.theweathercomp
+ any,org.openhab.binding.theweathercompany.handler,org.slf4j
 Service-Component: OSGI-INF/*.xml
 
