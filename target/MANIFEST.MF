@@ -4,7 +4,7 @@ Bundle-SymbolicName: org.openhab.binding.theweathercompany;singleton:=
 Export-Package: org.openhab.binding.theweathercompany,org.openhab.bind
  ing.theweathercompany.handler
 Bundle-Name: The Weather Company Binding
-Bundle-Version: 2.1.0.201706241617
+Bundle-Version: 2.1.0.201706290624
 Bundle-ClassPath: .
 Bundle-ManifestVersion: 2
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
